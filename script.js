@@ -103,3 +103,32 @@ const players = [
 }
 
 ];
+function openPack() {
+
+  const randomPlayer =
+    players[Math.floor(Math.random() * players.length)];
+
+  document.getElementById("result").innerHTML = `
+
+    <div class="card ${randomPlayer.rarity.toLowerCase()}">
+
+      <div class="rating">
+        ${randomPlayer.rating}
+      </div>
+
+      <div class="name">
+        ${randomPlayer.name}
+      </div>
+
+      <div class="nation">
+        🌍 ${randomPlayer.nation}
+      </div>
+
+      <div class="rarity">
+        💎 ${randomPlayer.rarity}
+      </div>
+
+    </div>
+
+  `;
+}
